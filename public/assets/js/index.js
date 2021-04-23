@@ -100,8 +100,11 @@ const handleNoteView = (e) => {
   renderActiveNote();
 };
 
-// Sets the activeNote to and empty object and allows the user to enter a new note
+// Sets the activeNote to an empty object and allows the user to enter a new note
+// Added removeAttribute to fix issue with not being able to add a new note after viewing old notes.
 const handleNewNoteView = (e) => {
+  noteTitle.removeAttribute('readonly');
+  noteText.removeAttribute('readonly');
   activeNote = {};
   renderActiveNote();
 };
