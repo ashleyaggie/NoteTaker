@@ -62,10 +62,9 @@ html, body {
   cursor: pointer;
 }
 
-/* Changed cursor: pointer to cursor: default, because it made it look like the note was a link */
 .list-container .list-group-item {
   border-left: none;
   border-right: none;
   padding: 20px;
-  cursor: default;
+  cursor: pointer;
 }
