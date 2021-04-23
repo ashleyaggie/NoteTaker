@@ -41,8 +41,18 @@ app.post('/api/notes', (req, res) => {
 
     res.json(newNote);
 })
-// .delete('/api/notes', (req, res) => {
+.delete('/api/notes', (req, res) => {
+    let currentId = req.id;
 
-// });
+    for (let i = 0; i < database.length; i++) {
+        let dbId = database[i].id;
+
+        console.log(dbId);
+
+        if (currentId === dbId) {
+            // Delete current object
+        }
+    }
+});
 
 app.listen(PORT, () => console.log(`App listening on PORT http://localhost:${PORT}`));
